@@ -34,15 +34,10 @@ composer update
 Open `config/app.php` and, to your **providers** array at the bottom, add:
 
 ```
-Fromz\L5caffold\GeneratorsServiceProvider::class,
-```
-### Step 4: Run composer
-
-```
-composer dumpautoload
+Fromz\L5scaffold\GeneratorsServiceProvider::class,
 ```
 
-### Step 5: Run Artisan!
+### Step 4: Run Artisan!
 
 You're all set. Run `php artisan` from the console, and you'll see the new commands `make:scaffold`.
 
@@ -50,20 +45,20 @@ You're all set. Run `php artisan` from the console, and you'll see the new comma
 
 
 ```
-php artisan make:scaffold Product --schema="title:string:default('Product Demo'), body:text"
+php artisan make:scaffold Product --schema="company_id:integer:unsigned,name:string,detail:text,activate:boolean:default('1'),picture:binary:nullable"
 ```
 This command will generate:
 
 ```
 app/Product.php
 app/Http/Controllers/ProductController.php
-database/migrations/2015_10_10_112233_create_Products_table.php
+database/migrations/2015_10_10_112233_create_products_table.php
 database/seeds/ProductTableSeeder.php
 resources/views/layout.blade.php
-resources/views/tweets/index.blade.php
-resources/views/tweets/show.blade.php
-resources/views/tweets/edit.blade.php
-resources/views/tweets/create.blade.php
+resources/views/products/index.blade.php
+resources/views/products/show.blade.php
+resources/views/products/edit.blade.php
+resources/views/products/create.blade.php
 ```
 And don't forget to run:
 
