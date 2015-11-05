@@ -1,5 +1,5 @@
 {
-  "name": "fromz/l5scaffold",
+  "name": "fromz/l5-scaffold",
   "description": "Extend Laravel 5 generators scaffold.",
   "license": "MIT",
   "minimum-stability": "dev",
